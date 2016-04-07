@@ -1,0 +1,25 @@
+.lifebackground {
+	-fx-background-image: url("rsz_gray.jpg");
+}
+
+.lifetitle {
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 70;
+	-fx-text-fill: white;
+}
+.lifetotal {
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 50;
+	-fx-text-fill: white;
+	-fx-text-align: center;
+	-fx-background-color: rgb(0,0,0, 0.5);
+}
+
+.lifebutton {
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 20;
+	-fx-text-fill: white;
+	-fx-text-align: center;
+	-fx-background-color: rgb(0,0,0, 0.5);
+	-fx-background-radius: 0;
+}

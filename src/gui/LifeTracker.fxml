@@ -4,10 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Test">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="lifebackground" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Test">
    <children>
-      <Button layoutX="265.0" layoutY="99.0" mnemonicParsing="false" onAction="#plusLife" text="+" />
-      <Button layoutX="249.0" layoutY="334.0" mnemonicParsing="false" onAction="#minusLife" text="-" />
-      <Label fx:id="top" layoutX="228.0" layoutY="176.0" prefHeight="74.0" prefWidth="90.0" text="f,jfnw," textAlignment="CENTER" />
+      <Button layoutX="167.0" layoutY="120.0" mnemonicParsing="false" onAction="#plusLife" prefHeight="37.0" prefWidth="249.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="+" />
+      <Button layoutX="167.0" layoutY="270.0" mnemonicParsing="false" onAction="#minusLife" prefHeight="37.0" prefWidth="249.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="-" />
+      <Label fx:id="top" alignment="CENTER" layoutX="167.0" layoutY="178.0" prefHeight="72.0" prefWidth="249.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" text="lifetotal" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="14.0" prefHeight="79.0" prefWidth="388.0" styleClass="lifetitle" stylesheets="@Stylesheet.css" text="Lifetracker" textAlignment="CENTER" />
    </children>
 </AnchorPane>
