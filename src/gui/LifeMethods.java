@@ -1,12 +1,12 @@
-package methods;
+package gui;
 
 public class LifeMethods {
-	private DatabaseMethods database;
 	int lifetotal = 20;
 	
 	public int getTotalHealth() {
 		return lifetotal;
 	}
+	
 	public int plusOneLife() {
 		lifetotal = lifetotal + 1;
 		return lifetotal;
