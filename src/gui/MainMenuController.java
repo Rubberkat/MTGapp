@@ -16,10 +16,6 @@ public class MainMenuController{
 
 	@FXML private Button golifetracker;
 
-
-	
-
-
 	public void gotoLifeTracker() throws IOException {
 		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
 		thisStage.hide();
@@ -50,7 +46,4 @@ public class MainMenuController{
 	public void getLife(){
 		f = lifemethods.lifetotal;
 	}
-	
-	
-
 }

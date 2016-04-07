@@ -15,6 +15,13 @@
 	-fx-background-color: rgb(0,0,0, 0.5);
 }
 
+.poisontotal {
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 50;
+	-fx-text-fill: green;
+	-fx-text-align: center;
+	-fx-background-color: rgb(0,0,0, 0.5);
+}
 .lifebutton {
 	-fx-font-family: "Times New Roman";
 	-fx-font-size: 20;
