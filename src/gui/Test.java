@@ -24,7 +24,7 @@ public class Test implements Initializable {
 //		Statement stmt = null;
 		int g = mainmenucontroller.f + 1;
 		top.setText(String.valueOf(g));
-//		mainmenucontroller.f = g;
+		mainmenucontroller.f = g;
 //		ResultSet rs = stmt.executeQuery( "SELECT life FROM lifetotal WHERE ID = 1" );
 //		
 	}
