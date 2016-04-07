@@ -8,3 +8,4 @@ public class Player {
 	public void setID(int id) {playerNumber = id;}
 	
 }
+

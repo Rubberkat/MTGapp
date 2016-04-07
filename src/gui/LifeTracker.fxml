@@ -6,9 +6,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="lifebackground" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Test">
    <children>
-      <Button layoutX="167.0" layoutY="120.0" mnemonicParsing="false" onAction="#plusLife" prefHeight="37.0" prefWidth="249.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="+" />
-      <Button layoutX="167.0" layoutY="270.0" mnemonicParsing="false" onAction="#minusLife" prefHeight="37.0" prefWidth="249.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="-" />
-      <Label fx:id="top" alignment="CENTER" layoutX="167.0" layoutY="178.0" prefHeight="72.0" prefWidth="249.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" text="lifetotal" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="14.0" prefHeight="79.0" prefWidth="388.0" styleClass="lifetitle" stylesheets="@Stylesheet.css" text="Lifetracker" textAlignment="CENTER" />
+      <Button layoutX="246.0" layoutY="140.0" mnemonicParsing="false" onAction="#plusLife" prefHeight="37.0" prefWidth="249.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="+" />
+      <Button layoutX="246.0" layoutY="290.0" mnemonicParsing="false" onAction="#minusLife" prefHeight="37.0" prefWidth="249.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="-" />
+      <Label fx:id="top" alignment="CENTER" layoutX="246.0" layoutY="198.0" prefHeight="72.0" prefWidth="249.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" text="lifetotal" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="34.0" prefHeight="79.0" prefWidth="388.0" styleClass="lifetitle" stylesheets="@Stylesheet.css" text="Lifetracker" textAlignment="CENTER" />
+      <Button layoutY="-2.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="126.0" styleClass="menubutton" stylesheets="@Stylesheet.css" text="LIFETRACKER" />
+      <Button layoutY="99.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="126.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="ROLLDICE" />
+      <Button layoutY="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="126.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="FLIPCOIN" />
+      <Button layoutY="301.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="126.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="CARD SEARCH" />
    </children>
 </AnchorPane>
