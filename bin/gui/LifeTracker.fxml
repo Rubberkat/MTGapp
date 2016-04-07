@@ -15,7 +15,7 @@
       <Button layoutY="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="126.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="FLIPCOIN" />
       <Button layoutY="301.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="126.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="CARD SEARCH" />
       <Button layoutX="486.0" layoutY="140.0" mnemonicParsing="false" prefHeight="37.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="+" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="486.0" layoutY="198.0" prefHeight="72.0" prefWidth="40.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" text="0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="486.0" layoutY="198.0" prefHeight="72.0" prefWidth="40.0" styleClass="poisontotal" stylesheets="@Stylesheet.css" text="0" />
       <Button layoutX="489.0" layoutY="290.0" mnemonicParsing="false" prefHeight="37.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="-" />
    </children>
 </AnchorPane>
