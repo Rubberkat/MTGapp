@@ -1,4 +1,4 @@
-package methods;
+package gui.methods;
 
 public class Player {
 	private int playerNumber;

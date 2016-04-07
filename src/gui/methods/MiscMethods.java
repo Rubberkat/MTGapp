@@ -1,4 +1,4 @@
-package methods;
+package gui.methods;
 
 import java.util.Random;
 

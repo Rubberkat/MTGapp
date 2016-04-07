@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 public class Test implements Initializable {
+	MainMenuController mainmenucontroller = new MainMenuController();
 	@FXML private Label top;
 	
 	
@@ -15,14 +16,18 @@ public class Test implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 
 	}
-	//public void setLifeTotal(String l) {
-//		lifetotal = l;
-	//}
-	//public String getLifeTotal() {
-//		return lifetotal;
-////		lifetotal.setText(String.valueOf(lifemethods.getTotalHealth()));
-	//}
 
+	public void plusLife() {
+		int g = mainmenucontroller.f + 1;
+		top.setText(String.valueOf(g));
+		mainmenucontroller.f = g;
+	}
+	
+	public void minusLife() {
+		int g = mainmenucontroller.f - 1;
+		top.setText(String.valueOf(g));
+		mainmenucontroller.f = g;
+	}
 	public void setLife(String l) {
 		top.setText(l);
 	}
