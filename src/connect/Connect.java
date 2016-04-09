@@ -1,8 +1,6 @@
 package connect;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Connect {
 	public static void connectDB() {

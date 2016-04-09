@@ -1,4 +1,4 @@
-package gui.methods;
+package connect;
 
 import java.sql.*;
 
@@ -25,8 +25,6 @@ public class DatabaseMethods {
 		
 	public static void createDB() {
 		Statement stmt = null;
-		
-		connectDB();
 		try {
 		  String sql = "CREATE TABLE IF NOT EXISTS lifetotal " + 
 					   "(ID INTEGER		PRIMARY KEY    	AUTOINCREMENT," +
