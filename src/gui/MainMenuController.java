@@ -19,8 +19,7 @@ public class MainMenuController{
 	public void gotoLifeTracker() throws IOException {
 		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
 		thisStage.hide();
-//		DatabaseMethods dbm = new DatabaseMethods();
-//		dbm.plusOneLife();
+		
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("LifeTracker.fxml"));
 			Parent root = loader.load();
@@ -47,4 +46,31 @@ public class MainMenuController{
 	public void getLife(){
 		lifetotal = db.setLife();
 	}
+	
+	public void goCoinFlip() throws IOException {
+		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
+		thisStage.hide();
+		
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("CoinFlip.fxml"));
+			Parent root = loader.load();
+			LifeTrackerController controller = (LifeTrackerController)loader.getController();
+			Stage s = new Stage(StageStyle.UNIFIED);
+			
+			
+			s.setScene(new Scene(root, 600, 400));
+			s.centerOnScreen();
+			
+			s.setResizable(false);
+			s.setTitle("Coinflip");
+	
+			s.show();
+			s.toFront();
+			
+			getLife();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	} 
 }

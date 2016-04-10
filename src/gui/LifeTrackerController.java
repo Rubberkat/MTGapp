@@ -9,9 +9,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 public class LifeTrackerController implements Initializable {
-	MainMenuController mainmenucontroller = new MainMenuController();
-	@FXML private Label top;
+	DatabaseMethods db = new DatabaseMethods();
 	
+	@FXML private Label top;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -19,13 +19,12 @@ public class LifeTrackerController implements Initializable {
 	}
 
 	public void plusLife() {
-		DatabaseMethods db = new DatabaseMethods();
 		db.plusOneLife();
 		top.setText(String.valueOf(db.getLife()));
 	}
 	
 	public void minusLife() {
-		DatabaseMethods db = new DatabaseMethods();
+	
 		db.minusOneLife();
 		top.setText(String.valueOf(db.getLife()));
 	}
