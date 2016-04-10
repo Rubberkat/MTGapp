@@ -12,6 +12,7 @@ public class DatabaseMethods {
 	int totallife = 0;
 	
 	public DatabaseMethods() {
+		
 		try{
 			Class.forName("org.sqlite.JDBC");
 			c = DriverManager.getConnection("jdbc:sqlite:playerlife.db");
@@ -24,6 +25,7 @@ public class DatabaseMethods {
 	}
 	
 	public void createDB() {
+		
 		try {
 		  String sql = "CREATE TABLE IF NOT EXISTS lifetotal " + 
 					   "(ID INTEGER		PRIMARY KEY    	AUTOINCREMENT," +
@@ -45,10 +47,12 @@ public class DatabaseMethods {
 	}
 	
 	public int getLife() {
+		
 		return totallife;
 	}
 
 	public int setLife() {
+		
 		try {
 			rs = stmt.executeQuery("SELECT life FROM lifetotal WHERE ID = 1");
 			while (rs.next()) {
@@ -63,6 +67,7 @@ public class DatabaseMethods {
 	}
 	
 	public void plusOneLife() {
+		
 		try { 
 			rs = stmt.executeQuery( "SELECT life FROM lifetotal WHERE ID = 1" );
 			while (rs.next()) {
@@ -80,6 +85,7 @@ public class DatabaseMethods {
 	}
 	
 	public void minusOneLife() {
+		
 		try { 
 			rs = stmt.executeQuery( "SELECT life FROM lifetotal WHERE ID = 1" );
 			while (rs.next()) {
@@ -97,10 +103,12 @@ public class DatabaseMethods {
 	}
 	
 	public void resetLife() {
+		
 		try {
 			stmt.executeUpdate("UPDATE lifetotal SET life = 20 WHERE ID = 1");
 			totallife = setLife();
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

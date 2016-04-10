@@ -1,7 +1,12 @@
 package methods;
 
+import databasefunctions.DatabaseMethods;
+
 public class LifeMethods {
-	int lifetotal = 20;
+	
+	DatabaseMethods dbmethods = new DatabaseMethods();
+	
+	int lifetotal;
 	
 	public int getTotalHealth() {
 		return lifetotal;
