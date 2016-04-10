@@ -19,6 +19,7 @@ public class MainMenuController {
 	@FXML private Button golifetracker;
 	@FXML private Button gocoinflip;
 	@FXML private Button godice;
+	@FXML private Button exitbutton;
 
 	public void gotoLifeTracker() throws IOException {
 		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
@@ -29,7 +30,7 @@ public class MainMenuController {
 			Parent root = loader.load();
 			LifeTrackerController controller = (LifeTrackerController)loader.getController();
 				
-			s.setScene(new Scene(root, 600, 400));
+			s.setScene(new Scene(root, 300, 400));
 			s.centerOnScreen();
 			s.setResizable(false);
 			s.setTitle("lifetracker");
@@ -95,4 +96,9 @@ public class MainMenuController {
 			e.printStackTrace();
 		} 
 	} 
+	
+	public void exit() {
+		Stage thisStage = (Stage) exitbutton.getScene().getWindow();
+		thisStage.close();
+	}
 }

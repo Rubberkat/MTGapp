@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" styleClass="lifebackground" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-35.0" layoutY="3.0" prefHeight="57.0" prefWidth="345.0" styleClass="menubar" stylesheets="@Stylesheet.css">
+         <children>
+            <Button fx:id="gomainmenu" layoutX="75.0" layoutY="16.0" mnemonicParsing="false" onAction="#goMainMenu" prefHeight="25.0" prefWidth="60.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="Back" />
+            <Button layoutX="244.0" layoutY="16.0" mnemonicParsing="false" onAction="#resetLife" prefHeight="25.0" prefWidth="60.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="Reset" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="40.0" layoutY="127.0" mnemonicParsing="false" onAction="#plusLife" prefHeight="37.0" prefWidth="233.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="40.0" layoutY="265.0" mnemonicParsing="false" onAction="#minusLife" prefHeight="37.0" prefWidth="233.0" styleClass="lifebutton" stylesheets="@Stylesheet.css" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="top" alignment="CENTER" layoutX="40.0" layoutY="179.0" prefHeight="72.0" prefWidth="233.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" text="lifetotal" />
+   </children>
+</AnchorPane>

@@ -14,7 +14,7 @@ public class Main extends Application {
 	DatabaseMethods db = new DatabaseMethods();
 	
     public void start(Stage primaryStage) throws Exception {
-    	
+  
     	db.createDB();
     	db.setLife();
     	

@@ -13,7 +13,7 @@ public class CoinFlipController {
 	
 	MiscMethods miscmethods = new MiscMethods();
 	Stage s = new Stage();
-	
+
 	@FXML private Label landedcoin;
 	
 	@FXML private Button gomainmenu;
@@ -86,4 +86,5 @@ public class CoinFlipController {
 			e.printStackTrace();
 		} 
 	}
+	
 }

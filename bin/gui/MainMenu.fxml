@@ -8,5 +8,6 @@
       <Button fx:id="golifetracker" layoutX="261.0" layoutY="166.0" mnemonicParsing="false" onAction="#gotoLifeTracker" text="Lifetracker" />
       <Button fx:id="gocoinflip" layoutX="261.0" layoutY="216.0" mnemonicParsing="false" onAction="#goCoinFlip" prefHeight="26.0" prefWidth="81.0" text="Coin flip" />
       <Button fx:id="godice" layoutX="284.0" layoutY="261.0" mnemonicParsing="false" onAction="#goDice" text="Dice" />
+      <Button fx:id="exitbutton" layoutX="273.0" layoutY="302.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
    </children>
 </AnchorPane>

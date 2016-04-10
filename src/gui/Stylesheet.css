@@ -1,14 +1,16 @@
+.menubar {
+
+	-fx-background-color: rgb(40, 40, 40);
+ 	-fx-effect: dropshadow(gaussian, #6E6054 , 3, 1, 0, 0 );
+}
 .lifebackground {
-	-fx-background-color: #cccccc;
+	-fx-background-color: #BFAC9B;
 }
 
 .innerbackground {
     -fx-background-color: #a6a6a6;
 }
-.menubar {
-    -fx-background-color: #404040;
-    
-}
+
 .lifetitle {
 	-fx-font-family: "Times New Roman";
 	-fx-font-size: 70;
