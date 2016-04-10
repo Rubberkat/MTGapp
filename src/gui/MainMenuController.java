@@ -12,7 +12,7 @@ import javafx.stage.StageStyle;
 
 public class MainMenuController{
 	DatabaseMethods db = new DatabaseMethods();
-	public int f = 20;
+	public int lifetotal = 0;
 
 	@FXML private Button golifetracker;
 
@@ -24,7 +24,7 @@ public class MainMenuController{
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("LifeTracker.fxml"));
 			Parent root = loader.load();
-			Test controller = (Test)loader.getController();
+			LifeTrackerController controller = (LifeTrackerController)loader.getController();
 			Stage s = new Stage(StageStyle.UNIFIED);
 			
 			
@@ -38,13 +38,13 @@ public class MainMenuController{
 			s.toFront();
 			
 			getLife();
-			controller.setLife(String.valueOf(f));
+			controller.setLife(String.valueOf(lifetotal));
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 	} 
 	
 	public void getLife(){
-		f = db.setLife();
+		lifetotal = db.setLife();
 	}
 }

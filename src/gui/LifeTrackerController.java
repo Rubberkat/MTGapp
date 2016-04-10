@@ -1,7 +1,6 @@
 package gui;
 
 import java.net.URL;
-import java.sql.*;
 import java.util.ResourceBundle;
 
 import connect.DatabaseMethods;
@@ -9,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class Test implements Initializable {
+public class LifeTrackerController implements Initializable {
 	MainMenuController mainmenucontroller = new MainMenuController();
 	@FXML private Label top;
 	
