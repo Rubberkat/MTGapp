@@ -1,7 +1,7 @@
 package gui;
 
 import java.io.IOException;
-
+import connect.DatabaseMethods;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,15 +11,16 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class MainMenuController{
-	LifeMethods lifemethods = new LifeMethods();
-	int f = 20;
+	DatabaseMethods db = new DatabaseMethods();
+	public int f = 20;
 
 	@FXML private Button golifetracker;
 
 	public void gotoLifeTracker() throws IOException {
 		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
 		thisStage.hide();
-		
+//		DatabaseMethods dbm = new DatabaseMethods();
+//		dbm.plusOneLife();
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("LifeTracker.fxml"));
 			Parent root = loader.load();
@@ -44,6 +45,6 @@ public class MainMenuController{
 	} 
 	
 	public void getLife(){
-		f = lifemethods.lifetotal;
+		f = db.setLife();
 	}
 }

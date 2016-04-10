@@ -4,7 +4,7 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-import connect.Connect;
+import connect.DatabaseMethods;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -20,21 +20,19 @@ public class Test implements Initializable {
 	}
 
 	public void plusLife() {
-//		Connect connect = new Connect();
-//		Statement stmt = null;
-		int g = mainmenucontroller.f + 1;
-		top.setText(String.valueOf(g));
-		mainmenucontroller.f = g;
-//		ResultSet rs = stmt.executeQuery( "SELECT life FROM lifetotal WHERE ID = 1" );
-//		
+		DatabaseMethods db = new DatabaseMethods();
+		db.plusOneLife();
+		top.setText(String.valueOf(db.getLife()));
 	}
 	
 	public void minusLife() {
-		int g = mainmenucontroller.f - 1;
-		top.setText(String.valueOf(g));
-		mainmenucontroller.f = g;
+		DatabaseMethods db = new DatabaseMethods();
+		db.minusOneLife();
+		top.setText(String.valueOf(db.getLife()));
 	}
+	
 	public void setLife(String l) {
+		
 		top.setText(l);
 	}
 }
