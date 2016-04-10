@@ -1,7 +1,8 @@
 package gui;
 
 import java.io.IOException;
-import connect.DatabaseMethods;
+
+import databasefunctions.DatabaseMethods;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +12,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class MainMenuController{
+	
 	DatabaseMethods db = new DatabaseMethods();
+	
 	public int lifetotal = 0;
 
 	@FXML private Button golifetracker;

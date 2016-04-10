@@ -1,7 +1,7 @@
 package gui;
 
 
-import connect.DatabaseMethods;
+import databasefunctions.DatabaseMethods;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-	
 
     public void start(Stage primaryStage) throws Exception {
     	DatabaseMethods db = new DatabaseMethods();
@@ -24,7 +23,7 @@ public class Main extends Application {
 		primaryStage.show();
 		primaryStage.toFront();
     }
-	
+    
 	public static void main(String[] args) {
 		launch(args);
 	}

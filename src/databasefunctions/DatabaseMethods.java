@@ -1,4 +1,4 @@
-package connect;
+package databasefunctions;
 
 import java.sql.*;
 //import gui.MainMenuController;
@@ -102,7 +102,15 @@ public class DatabaseMethods {
 			e.printStackTrace();
 			}
 	}
-
+	
+	public void resetLife() {
+		try {
+			stmt.executeUpdate("UPDATE lifetotal SET life = 20 WHERE ID = 1");
+			totallife = setLife();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
 
 

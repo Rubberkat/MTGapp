@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="lifebackground" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CoinFlipController">
    <children>
-      <Label fx:id="landedcoin" alignment="CENTER" contentDisplay="CENTER" layoutX="221.0" layoutY="172.0" prefHeight="57.0" prefWidth="186.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" />
-      <Button fx:id="coinflip" layoutX="272.0" layoutY="96.0" mnemonicParsing="false" onAction="#flipACoin" text="flip a coin" />
+      <AnchorPane layoutX="86.0" layoutY="35.0" prefHeight="374.0" prefWidth="428.0" styleClass="innerbackground" stylesheets="@Stylesheet.css">
+         <children>
+            <Label fx:id="landedcoin" alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="132.0" prefHeight="57.0" prefWidth="186.0" styleClass="lifetotal" stylesheets="@Stylesheet.css" />
+            <Button fx:id="coinflip" layoutX="178.0" layoutY="56.0" mnemonicParsing="false" onAction="#flipACoin" text="flip a coin">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="gomainmenu" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" onAction="#goMainMenu" text="Back" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="35.0" prefWidth="607.0" styleClass="menubar" stylesheets="@Stylesheet.css">
+         <children>
+            <Button fx:id="golifetracker" layoutX="86.0" layoutY="-3.0" mnemonicParsing="false" onAction="#goLifeTracker" prefHeight="37.0" prefWidth="107.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="LIFETRACKER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="gorolldice" layoutX="193.0" layoutY="-3.0" mnemonicParsing="false" onAction="#goRollDice" prefHeight="37.0" prefWidth="107.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="ROLLDICE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="300.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" styleClass="menubutton" stylesheets="@Stylesheet.css" text="FLIPCOIN" />
+            <Button layoutX="407.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" styleClass="menubuttonselected" stylesheets="@Stylesheet.css" text="CARD SEARCH" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
