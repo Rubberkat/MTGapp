@@ -3,7 +3,6 @@ package gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import databasefunctions.DatabaseMethods;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,13 +12,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class LifeTrackerController implements Initializable {
 	
 	DatabaseMethods db = new DatabaseMethods();
+	Stage s = new Stage();
 	
 	@FXML private Label top;
+	
 	@FXML private Button gorolldice;
 	@FXML private Button goflipcoin;
 	@FXML private Button gomainmenu;
@@ -57,11 +57,9 @@ public class LifeTrackerController implements Initializable {
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			MainMenuController controller = (MainMenuController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
-		
+	
 			s.setScene(new Scene(root, 600, 400));
 			s.centerOnScreen();
-				
 			s.setResizable(false);
 			s.setTitle("Main menu");
 			s.show();
@@ -80,11 +78,9 @@ public class LifeTrackerController implements Initializable {
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			DiceRollController controller = (DiceRollController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
 		
 			s.setScene(new Scene(root, 600, 400));
-			s.centerOnScreen();
-				
+			s.centerOnScreen();		
 			s.setResizable(false);
 			s.setTitle("Main menu");
 			s.show();
@@ -103,11 +99,9 @@ public class LifeTrackerController implements Initializable {
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			CoinFlipController controller = (CoinFlipController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
 		
 			s.setScene(new Scene(root, 600, 400));
-			s.centerOnScreen();
-				
+			s.centerOnScreen();	
 			s.setResizable(false);
 			s.setTitle("Main menu");
 			s.show();

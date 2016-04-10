@@ -1,38 +1,33 @@
 package databasefunctions;
 
 import java.sql.*;
-//import gui.MainMenuController;
+
 
 public class DatabaseMethods {
-//	MainMenuController mainmenucontroller = new MainMenuController();
+
 	private static Connection c;
 	private static Statement stmt;
 	private static ResultSet rs;
+	
 	int totallife = 0;
 	
 	public DatabaseMethods() {
 		try{
 			Class.forName("org.sqlite.JDBC");
 			c = DriverManager.getConnection("jdbc:sqlite:playerlife.db");
-	          
 			stmt = c.createStatement();
 			stmt.close();
-
 		} 
 		catch (Exception e) {
 		  e.printStackTrace();
 		}
 	}
 	
-
-		
 	public void createDB() {
-
 		try {
 		  String sql = "CREATE TABLE IF NOT EXISTS lifetotal " + 
 					   "(ID INTEGER		PRIMARY KEY    	AUTOINCREMENT," +
 					   " life         	INT)";
-		  
 		  
 		  stmt.executeUpdate(sql);
 		  
@@ -54,14 +49,14 @@ public class DatabaseMethods {
 	}
 
 	public int setLife() {
-		
 		try {
 			rs = stmt.executeQuery("SELECT life FROM lifetotal WHERE ID = 1");
 			while (rs.next()) {
 				int life = rs.getInt("life");
 				totallife = life;
 			}
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 		return totallife;
@@ -78,12 +73,10 @@ public class DatabaseMethods {
 				prep.executeUpdate();
 				totallife = plusOne;
 			}
-			
-			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			}
+		}
 	}
 	
 	public void minusOneLife() {

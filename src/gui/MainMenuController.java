@@ -1,7 +1,6 @@
 package gui;
 
 import java.io.IOException;
-
 import databasefunctions.DatabaseMethods;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-public class MainMenuController{
+public class MainMenuController {
 	
 	DatabaseMethods db = new DatabaseMethods();
+	Stage s = new Stage();
 	
 	public int lifetotal = 0;
 
@@ -29,20 +28,17 @@ public class MainMenuController{
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("LifeTracker.fxml"));
 			Parent root = loader.load();
 			LifeTrackerController controller = (LifeTrackerController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
-			
-			
+				
 			s.setScene(new Scene(root, 600, 400));
 			s.centerOnScreen();
-			
 			s.setResizable(false);
 			s.setTitle("lifetracker");
-	
 			s.show();
 			s.toFront();
 			
 			getLife();
 			controller.setLife(String.valueOf(lifetotal));
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
@@ -61,8 +57,6 @@ public class MainMenuController{
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			CoinFlipController controller = (CoinFlipController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
-			
 			
 			s.setScene(new Scene(root, 600, 400));
 			s.centerOnScreen();
@@ -74,7 +68,6 @@ public class MainMenuController{
 			s.toFront();
 			
 			getLife();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
@@ -89,20 +82,15 @@ public class MainMenuController{
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			DiceRollController controller = (DiceRollController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
-			
-			
+	
 			s.setScene(new Scene(root, 600, 400));
 			s.centerOnScreen();
-			
 			s.setResizable(false);
 			s.setTitle("Dice");
-	
 			s.show();
 			s.toFront();
 			
 			getLife();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

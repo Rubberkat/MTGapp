@@ -7,14 +7,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import methods.MiscMethods;
 
 public class DiceRollController {
 	
 	MiscMethods miscmethods = new MiscMethods();
+	Stage s = new Stage();
 	
 	@FXML private Label dicenumber;
+	
 	@FXML private Button gomainmenu;
 	@FXML private Button goflipcoin;
 	@FXML private Button golifetracker;
@@ -32,11 +33,9 @@ public class DiceRollController {
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			MainMenuController controller = (MainMenuController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
 		
 			s.setScene(new Scene(root, 600, 400));
-			s.centerOnScreen();
-				
+			s.centerOnScreen();	
 			s.setResizable(false);
 			s.setTitle("Main menu");
 			s.show();
@@ -55,11 +54,9 @@ public class DiceRollController {
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			CoinFlipController controller = (CoinFlipController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
 		
 			s.setScene(new Scene(root, 600, 400));
 			s.centerOnScreen();
-				
 			s.setResizable(false);
 			s.setTitle("Main menu");
 			s.show();
@@ -78,11 +75,9 @@ public class DiceRollController {
 			Parent root = loader.load();
 			@SuppressWarnings("unused")
 			LifeTrackerController controller = (LifeTrackerController)loader.getController();
-			Stage s = new Stage(StageStyle.UNIFIED);
 		
 			s.setScene(new Scene(root, 600, 400));
-			s.centerOnScreen();
-				
+			s.centerOnScreen();	
 			s.setResizable(false);
 			s.setTitle("Main menu");
 			s.show();
