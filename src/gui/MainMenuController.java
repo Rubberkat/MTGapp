@@ -15,6 +15,8 @@ public class MainMenuController{
 	public int lifetotal = 0;
 
 	@FXML private Button golifetracker;
+	@FXML private Button gocoinflip;
+	@FXML private Button godice;
 
 	public void gotoLifeTracker() throws IOException {
 		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
@@ -48,13 +50,14 @@ public class MainMenuController{
 	}
 	
 	public void goCoinFlip() throws IOException {
-		Stage thisStage = ((Stage)golifetracker.getScene().getWindow());
+		Stage thisStage = ((Stage)gocoinflip.getScene().getWindow());
 		thisStage.hide();
 		
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("CoinFlip.fxml"));
 			Parent root = loader.load();
-			LifeTrackerController controller = (LifeTrackerController)loader.getController();
+			@SuppressWarnings("unused")
+			CoinFlipController controller = (CoinFlipController)loader.getController();
 			Stage s = new Stage(StageStyle.UNIFIED);
 			
 			
@@ -63,6 +66,34 @@ public class MainMenuController{
 			
 			s.setResizable(false);
 			s.setTitle("Coinflip");
+	
+			s.show();
+			s.toFront();
+			
+			getLife();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	} 
+	
+	public void goDice() throws IOException {
+		Stage thisStage = ((Stage)godice.getScene().getWindow());
+		thisStage.hide();
+		
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("DiceRoll.fxml"));
+			Parent root = loader.load();
+			@SuppressWarnings("unused")
+			DiceRollController controller = (DiceRollController)loader.getController();
+			Stage s = new Stage(StageStyle.UNIFIED);
+			
+			
+			s.setScene(new Scene(root, 600, 400));
+			s.centerOnScreen();
+			
+			s.setResizable(false);
+			s.setTitle("Dice");
 	
 			s.show();
 			s.toFront();

@@ -1,4 +1,4 @@
-package gui.methods;
+package methods;
 
 public class LifeMethods {
 	int lifetotal = 20;

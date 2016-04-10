@@ -6,6 +6,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
    <children>
       <Button fx:id="golifetracker" layoutX="261.0" layoutY="166.0" mnemonicParsing="false" onAction="#gotoLifeTracker" text="Lifetracker" />
-      <Button fx:id="goCoinFlip" layoutX="261.0" layoutY="216.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" text="Coin flip" />
+      <Button fx:id="gocoinflip" layoutX="261.0" layoutY="216.0" mnemonicParsing="false" onAction="#goCoinFlip" prefHeight="26.0" prefWidth="81.0" text="Coin flip" />
+      <Button fx:id="godice" layoutX="284.0" layoutY="261.0" mnemonicParsing="false" onAction="#goDice" text="Dice" />
    </children>
 </AnchorPane>
