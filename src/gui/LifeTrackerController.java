@@ -23,6 +23,7 @@ public class LifeTrackerController implements Initializable {
 	@FXML private Button gorolldice;
 	@FXML private Button goflipcoin;
 	@FXML private Button gomainmenu;
+	
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -30,25 +31,29 @@ public class LifeTrackerController implements Initializable {
 	}
 
 	public void plusLife() {
+		
 		db.plusOneLife();
 		top.setText(String.valueOf(db.getLife()));
 	}
-	
+
+
 	public void minusLife() {
 	
 		db.minusOneLife();
 		top.setText(String.valueOf(db.getLife()));
 	}
 	public void resetLife() {
+		
 		db.resetLife();
 		top.setText(String.valueOf(db.getLife()));
 	}
 	public void setLife(String l) {
 		
-		top.setText(l);
+		top.setText(l);	 
 	}
 	
 	public void goMainMenu() {
+		
 		Stage thisStage = ((Stage)gomainmenu.getScene().getWindow());
 		thisStage.hide();
 			
@@ -70,6 +75,7 @@ public class LifeTrackerController implements Initializable {
 	}
 	
 	public void goRollDice() {
+		
 		Stage thisStage = ((Stage)gorolldice.getScene().getWindow());
 		thisStage.hide();
 			
@@ -91,6 +97,7 @@ public class LifeTrackerController implements Initializable {
 	}
 	
 	public void goFlipCoin() {
+		
 		Stage thisStage = ((Stage)goflipcoin.getScene().getWindow());
 		thisStage.hide();
 			
